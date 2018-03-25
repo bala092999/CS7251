@@ -56,7 +56,7 @@ void print(Q *que){
     }
     else printf("Empty");
 }
-
+// Some Test Cases
 void main(){
     Q *q=createq();
     int i,d;
