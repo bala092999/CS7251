@@ -82,25 +82,25 @@ void insertatend(int data, List *list){
 }
 
 void insertat(int val,int pos,List *list){
-        if(pos==0){
-            insertfirst(val,list);
-            return;
-        }
-        Node *temp;
-        temp=list->head;
-        Node *s;
-        s=createnode(val);
-        int i;
-        for(i=0;i<pos-1;i++){
-                temp=temp->next;
-        }
+    if(pos==0){
+        insertfirst(val,list);
+        return;
+    }
+    Node *temp;
+    temp=list->head;
+    Node *s;
+    s=createnode(val);
+    int i;
+    for(i=0;i<pos-1;i++){
+            temp=temp->next;
+    }
 
-        if (temp->next==NULL &&pos==i+1){
-            insertatend(val,list);
-            return;
-        }
-        s->next=temp->next;
-        temp->next=s;
+    if (temp->next==NULL &&pos==i+1){
+        insertatend(val,list);
+        return;
+    }
+    s->next=temp->next;
+    temp->next=s;
 }
 
 
@@ -170,3 +170,5 @@ void destroy(List *list){
   }
   free(list);
 }
+
+//END
