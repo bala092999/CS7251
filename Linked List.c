@@ -122,25 +122,25 @@ void deleteval(int data, List *list){
 }
 
 void deleteend(List *list){
-        if (size(*list)==0){
-                printf("\nList is empty");
-                return;
-        }
-        Node* temp;
-        temp=list->head;
-        int i;
-        for(i=0;temp->next->next!=NULL;i++){
-                temp=temp->next;
-        }
-        free(temp->next->next);
-        temp->next=NULL;
+    if (size(*list)==0){
+            printf("\nList is empty");
+            return;
+    }
+    Node* temp;
+    temp=list->head;
+    int i;
+    for(i=0;temp->next->next!=NULL;i++){
+            temp=temp->next;
+    }
+    free(temp->next->next);
+    temp->next=NULL;
 }
 
 void deletefirst(Node **head){
-        Node* temp=*head;
-        temp = temp->next;
-        free(head);
-        *head=temp;
+    Node* temp=*head;
+    temp = temp->next;
+    free(head);
+    *head=temp;
 }
 
 void deletemid(List *list){
