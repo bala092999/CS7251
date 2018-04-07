@@ -56,39 +56,3 @@ void print(Q *que){
     }
     else printf("Empty");
 }
-// Some Test Cases
-void main(){
-    Q *q=createq();
-    int i,d;
-    for(i=0;i<10;i++){
-        enque(q,i);
-    }
-    printf("\nInitially\n");
-    print(q);
-
-    printf("\n\nTrying to enter an element\n");
-    if(enque(q,89))
-        printf("\nInserted:%d\n",i);
-    else printf("Full\n");
-    printf("\nDeleting one element");
-    d==deque(q);
-    if(d!=-1)printf("\nDeleted element is %d",d);
-    else printf("\nDeletion unsuccessful");
-
-    print(q);
-    printf("\n\nSize: %d",qsize(q));
-    if(enque(q,25))
-        printf("\nInserted:%d\n",25);
-    print(q);
-    printf("\n\nSize: %d\n",qsize(q));
-    int e=qsize(q);
-    for(i=0;i<e;i++){
-        deque(q);
-    }
-    print(q);
-    printf("\nTrying to insert");
-    if(enque(q,89))
-        printf("\n\nInserted:%d\n",89);
-    print(q);
-    printf("\n\nSize: %d",qsize(q));
-}
